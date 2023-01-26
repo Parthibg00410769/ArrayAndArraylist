@@ -16,10 +16,7 @@ public class ArrayDemo {
         anArray[7]= 800;
         anArray[8]= 900;
         anArray[9]= 1000;
-        System.out.println("Please enter your  number: ");
 
-        Scanner myScan = new Scanner(System.in);
-        anArray[10] = myScan.nextInt();
 
         System.out.println("Element at index 0:" + anArray[0]);
         System.out.println("Element at index 1:" + anArray[1]);
@@ -31,7 +28,17 @@ public class ArrayDemo {
         System.out.println("Element at index 7:" + anArray[7]);
         System.out.println("Element at index 8:" + anArray[8]);
         System.out.println("Element at index 9:" + anArray[9]);
-        System.out.println("Element at index 10: " + anArray[10]);
+        try {
+            System.out.println("Please enter your  number: ");
+
+            Scanner myScan = new Scanner(System.in);
+            anArray[10] = myScan.nextInt();
+            System.out.println("Element at index 10: " + anArray[10]);
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Run out of array range");
+            System.out.println(e);
+        }
 
 
 
